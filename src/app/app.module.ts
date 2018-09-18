@@ -12,17 +12,27 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { AuthService } from 'src/app/services/auth.service';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { Register2Component } from './components/register2/register2.component';
 
 const routes = [
   { path: "register", component: RegistrationComponent},
-  
+  { path: "register2", component: Register2Component},
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component:HomeComponent},
+  { path: '**', component: RegistrationComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LoginComponent,
+    HomeComponent,
+    Register2Component,
+   // HomeComponent
   ],
   imports: [
     BrowserModule,
