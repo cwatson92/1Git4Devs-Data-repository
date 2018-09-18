@@ -1,0 +1,32 @@
+
+<mat-toolbar color="primary">
+<h1>Register</h1>
+</mat-toolbar>
+
+
+
+<form (ngSubmit)="onSubmit()" [formGroup]="_registerForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="first name" type="first name" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+          <input matInput placeholder="Last Name" formControlName="last name" type="last name" required/>
+      </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput placeholder="Last Four" formControlName="last four" type="last four" required/>
+        </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+          <input matInput placeholder="User Name" formControlName="user name" type="user name" required/>
+      </mat-form-field>
+  </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Register</button>
+</form>
