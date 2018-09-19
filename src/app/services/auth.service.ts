@@ -7,7 +7,7 @@ import { Observable, Subject } from 'rxjs';
 
 // const Api_Url = "http://kcpelevennoteapie.azurewebsites.net";
 // const Api_Url = "https://kcpelevennote.azurewebsites.net"
-const Api_Url = "https://cashflowfinance.azurewebsites.net"
+const Api_Url = "https://cashflowfinances.azurewebsites.net"
 
 
 @Injectable()
