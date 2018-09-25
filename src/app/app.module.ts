@@ -4,7 +4,7 @@ import { RouterModule } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule} from "@angular/material";
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule,MatTableModule} from "@angular/material";
 
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -15,13 +15,20 @@ import { AuthService } from 'src/app/services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { Register2Component } from './components/register2/register2.component';
+import { NetworthIndexComponent } from './components/networth/networth-index/networth-index.component';
+import { NetWorthService } from './services/networth.service';
+import { ExpenseService } from './services/expense.service';
+import { ExpenseIndexComponent } from './components/expense/expense-index/expense-index.component';
+import { ExpenseCreateComponent } from './components/expense/expense-create/expense-create.component';
 
 const routes = [
   { path: "register", component: RegistrationComponent},
   { path: "register2", component: Register2Component},
   { path: 'login', component: LoginComponent },
   { path: 'home', component:HomeComponent},
-  { path: '**', component: RegistrationComponent }
+  { path: 'netWorth',component:NetworthIndexComponent},
+  { path: 'expense', component:ExpenseIndexComponent},
+  { path: '**', component: LoginComponent }
 ];
 
 @NgModule({
@@ -32,6 +39,9 @@ const routes = [
     LoginComponent,
     HomeComponent,
     Register2Component,
+    NetworthIndexComponent,
+    ExpenseIndexComponent,
+    ExpenseCreateComponent,
    // HomeComponent
   ],
   imports: [
@@ -45,9 +55,12 @@ const routes = [
     RouterModule.forRoot(routes),
     HttpClientModule,
     MatInputModule,
+    MatTableModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    NetWorthService,
+    ExpenseService,
   ],
   bootstrap: [AppComponent]
 })

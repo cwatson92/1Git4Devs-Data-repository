@@ -1,0 +1,28 @@
+<h1>Index</h1>
+<button mat-raised color="primary">Create New</button>
+<hr>
+
+<div>
+<table mat-table [dataSource]= "dataSource" class="mat-elevation-z8">
+  
+  <ng-container matColumnDef="TotalAssets">
+    <th mat-header-cell *matHeaderCellDef> Total Assets </th>
+    <td mat-cell *matCellDef="let netWorth"> {{netWorth.TotalAssets}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="TotalLiabilities">
+    <th mat-header-cell *matHeaderCellDef> Total Liabilities </th>
+    <td mat-cell *matCellDef="let netWorth"> {{netWorth.TotalLiabilities}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="TotalNetWorth">
+    <th mat-header-cell *matHeaderCellDef> Total NetWorth </th>
+    <td mat-cell *matCellDef="let netWorth"> {{netWorth.TotalNetWorth}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+</table>
+
+</div>
