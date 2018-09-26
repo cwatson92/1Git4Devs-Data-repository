@@ -27,7 +27,7 @@ export class AuthService {
        return this._http.post(`${Api_Url}/token`,str).subscribe( (token: Token) => {
          this.userInfo = token;
          localStorage.setItem("id_token",token.access_token);
-         localStorage.setHeader("Access-Control-Allow-Origin", "*");
+        //  localStorage.setHeader("Access-Control-Allow-Origin", "*");
          this.isLoggedIn.next(true);
          this._router.navigate(['/'])
        });
@@ -42,3 +42,4 @@ export class AuthService {
   }
 
 }
+

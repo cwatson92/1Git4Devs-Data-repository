@@ -1,3 +1,21 @@
-<p>
-  expense-create works!
-</p>
+<h1>Create</h1>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="expenseForm">
+<div class="container">
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="Name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Cost" formControlName="Cost">
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput placeholder="Description" formControlName="Description">
+    </mat-form-field>
+
+  <button mat-raised color="primary"> Submit </button>
+
+  <a mat-button routerLink="/expense">Back to List</a>
+</div>
+</form>
+
