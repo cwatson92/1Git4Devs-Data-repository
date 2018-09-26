@@ -11,11 +11,12 @@ import { MatTableDataSource } from '@angular/material';
 export class ExpenseIndexComponent implements OnInit {
   columnNames = ['Name', 'Cost', 'Description']
   dataSource: MatTableDataSource<Expense>
-
+ Name= "love";
   constructor(private _expenseService: ExpenseService) { }
 
   ngOnInit() {
     this._expenseService.getExpense().subscribe((expense:Expense[]) => {
+      console.log(expense);
     this.dataSource = new MatTableDataSource<Expense>(expense);
     });
   }

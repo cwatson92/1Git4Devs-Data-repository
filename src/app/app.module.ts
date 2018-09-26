@@ -20,6 +20,7 @@ import { NetWorthService } from './services/networth.service';
 import { ExpenseService } from './services/expense.service';
 import { ExpenseIndexComponent } from './components/expense/expense-index/expense-index.component';
 import { ExpenseCreateComponent } from './components/expense/expense-create/expense-create.component';
+import { ExpenseEditComponent } from './components/expense/expense-edit/expense-edit.component';
 
 const routes = [
   { path: "register", component: RegistrationComponent},
@@ -27,7 +28,11 @@ const routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component:HomeComponent},
   { path: 'netWorth',component:NetworthIndexComponent},
-  { path: 'expense', component:ExpenseIndexComponent},
+  { path: 'expense', children:[
+    { path: '',component: ExpenseIndexComponent },
+    { path: 'create', component: ExpenseCreateComponent },
+   ]
+  },
   { path: '**', component: LoginComponent }
 ];
 
@@ -42,6 +47,7 @@ const routes = [
     NetworthIndexComponent,
     ExpenseIndexComponent,
     ExpenseCreateComponent,
+    ExpenseEditComponent,
    // HomeComponent
   ],
   imports: [
