@@ -1,0 +1,29 @@
+<div class="expense">
+<h1>Expenses</h1>
+<button mat-raised color="blue" routerLink = "/expense/create">Create New</button>
+<hr>
+
+<table mat-table [dataSource]= "dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="Name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let expense"> {{expense.Name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Cost">
+    <th mat-header-cell *matHeaderCellDef> Cost </th>
+    <td mat-cell *matCellDef="let expense"> {{expense.Cost}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Description">
+    <th mat-header-cell *matHeaderCellDef> Description </th>
+    <td mat-cell *matCellDef="let expense"> {{expense.Description}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
+  
+</table>
+</div>
+
+

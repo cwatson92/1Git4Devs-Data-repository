@@ -5,8 +5,6 @@ import { Token } from 'src/app/components/models/Token';
 import { Router } from "@angular/router";
 import { Observable, Subject } from 'rxjs';
 
-// const Api_Url = "http://kcpelevennoteapie.azurewebsites.net";
-// const Api_Url = "https://kcpelevennote.azurewebsites.net"
 const Api_Url = "https://cashflowfinances.azurewebsites.net"
 
 
@@ -26,10 +24,10 @@ export class AuthService {
     const str = 
        `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
 
-       return this._http.post(`${Api_Url}/Token`,str).subscribe( (token: Token) => {
+       return this._http.post(`${Api_Url}/token`,str).subscribe( (token: Token) => {
          this.userInfo = token;
          localStorage.setItem("id_token",token.access_token);
-         localStorage.setHeader("Access-Control-Allow-Origin", "*");
+        //  localStorage.setHeader("Access-Control-Allow-Origin", "*");
          this.isLoggedIn.next(true);
          this._router.navigate(['/'])
        });
@@ -44,3 +42,4 @@ export class AuthService {
   }
 
 }
+
