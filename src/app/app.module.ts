@@ -45,9 +45,6 @@ const routes = [
     //{ path: 'delete/:id', component: ExpenseEditComponent}
    ]
   },
-  //{ path: 'budget', component:BudgetIndexComponent},
-  //{ path: 'create', component: BudgetCreateComponent},
-  
   { path: '**', component: LoginComponent }
 ];
 
