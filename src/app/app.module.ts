@@ -21,6 +21,7 @@ import { ExpenseService } from './services/expense.service';
 import { ExpenseIndexComponent } from './components/expense/expense-index/expense-index.component';
 import { ExpenseCreateComponent } from './components/expense/expense-create/expense-create.component';
 import { ExpenseEditComponent } from './components/expense/expense-edit/expense-edit.component';
+import { ExpenseDeleteComponent } from './components/expense/expense-delete/expense-delete.component';
 
 const routes = [
   { path: "register", component: RegistrationComponent},
@@ -31,6 +32,8 @@ const routes = [
   { path: 'expense', children:[
     { path: '',component: ExpenseIndexComponent },
     { path: 'create', component: ExpenseCreateComponent },
+    { path: 'edit/:id', component: ExpenseEditComponent},
+    { path: 'delete/:id', component: ExpenseEditComponent}
    ]
   },
   { path: '**', component: LoginComponent }
@@ -48,6 +51,7 @@ const routes = [
     ExpenseIndexComponent,
     ExpenseCreateComponent,
     ExpenseEditComponent,
+    ExpenseDeleteComponent,
    // HomeComponent
   ],
   imports: [

@@ -17,10 +17,17 @@ export class ExpenseService {
     return this._http.post(`${ApiUrl}api/Expense/`, expense, { headers: this.getHeaders()});
   }
 
-  updateExpense(expense: Expense) {
-    return this._http.put(`${ApiUrl}api/Expense/`, expense, { headers: this.getHeaders() });
+  editExpense(id: string) {
+    return this._http.get(`${ApiUrl}api/Expense/${id}`, { headers: this.getHeaders()});
   }
 
+  updateExpense(expense: Expense, id: string) {
+    return this._http.put(`${ApiUrl}api/Expense/${id}`, expense, { headers: this.getHeaders() });
+  }
+
+  deleteExpense(id: number) {
+    return this._http.get(`${ApiUrl}api/Expense/${id}`, { headers: this.getHeaders()});
+  }
   private getHeaders() {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`); 
   }
