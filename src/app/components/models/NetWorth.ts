@@ -28,6 +28,4 @@ export interface NetWorth{
     StudentLoans: number;
     LifeInsurancePolicyLoans: number;
     OtherLongTermDebt: number;
-
-
 }

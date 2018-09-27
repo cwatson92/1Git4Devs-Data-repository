@@ -1,5 +1,6 @@
-<h1>Index</h1>
-<button mat-raised color="primary">Create New</button>
+<app-header></app-header>
+<!-- <h1>Index</h1>
+ <button mat-raised color="primary" routerLink="/netWorth/create">Create New</button>
 <hr>
 
 <div>
@@ -24,5 +25,15 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   
 </table>
+</div> -->
+<form [formGroup]="NetWorthForm"> 
+  <mat-form-field>
+    <input matInput placeholder="SavingsAccount" formControlName="SavingsAccount">
+  </mat-form-field>
 
-</div>
+  <mat-form-field>
+      <input matInput placeholder="CheckingAccount" formControlName="CheckingAccount">
+  </mat-form-field>
+
+</form>
+
