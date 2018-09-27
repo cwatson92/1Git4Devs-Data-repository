@@ -9,9 +9,6 @@ import {APIURL } from '../../environments/environment.prod';
 
 // const Api_Url = "http://kcpelevennoteapie.azurewebsites.net";
 // const Api_Url = "https://kcpelevennote.azurewebsites.net"
-const Api_Url = "https://cashflowfinances.azurewebsites.net"
-
-
 
 @Injectable()
 export class AuthService {
@@ -28,14 +25,12 @@ export class AuthService {
   login(loginInfo) {
     const str = 
        `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
-
-
        return this._http.post(`${APIURL}/Token`,str).subscribe( (token: Token) => {
          this.userInfo = token;
          localStorage.setItem("id_token",token.access_token);
         //  localStorage.setHeader("Access-Control-Allow-Origin", "*");
          this.isLoggedIn.next(true);
-         this._router.navigate(['/'])
+         this._router.navigate(['/netWorth'])
        });
   }
 

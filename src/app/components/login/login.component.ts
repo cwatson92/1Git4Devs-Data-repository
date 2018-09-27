@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from "@angular/forms"
 import { AuthService } from '../../services/auth.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     this.authService.login(this.loginForm.value);
+    console.log(this.authService);
   }
 
 }
