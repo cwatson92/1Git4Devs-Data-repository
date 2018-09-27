@@ -9,7 +9,7 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./expense-index.component.css']
 })
 export class ExpenseIndexComponent implements OnInit {
-  columnNames = ['Name', 'Cost', 'Description']
+  columnNames = ['Name', 'Cost', 'Description', 'Edit', 'Delete']
   dataSource: MatTableDataSource<Expense>
  Name= "love";
   constructor(private _expenseService: ExpenseService) { }

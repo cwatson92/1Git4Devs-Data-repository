@@ -14,23 +14,29 @@ export class ExpenseEditComponent implements OnInit {
   expense: Expense;
 
   editExpenseForm: FormGroup;
-  constructor(private _from: FormBuilder,
+  constructor(private _form: FormBuilder,
               private _expenseService: ExpenseService,
               private _ar: ActivatedRoute,
-              private _router: Router) {
+              private _router: Router,
+              private _activatedRoute : ActivatedRoute) {     
     
     this._ar.paramMap.subscribe(p => {
-      this._expenseService.getExpense().subscribe((singleExpense: Expense) => {
+      this._expenseService.editExpense(p.get('id')).subscribe((singleExpense: Expense) => {
+        this.expense = singleExpense;
+        console.log(this._ar)
         this.createForm();
       });
     });            
   }
 
   ngOnInit() {
+    this._activatedRoute.paramMap.subscribe(routeData => {
+      console.log(routeData)
+    })
   }
 
   createForm() {
-    this.editExpenseForm = this._from.group({
+    this.editExpenseForm = this._form.group({
       ExpenseId: new FormControl(this.expense.ExpenseId),
       Name: new FormControl(this.expense.Name),
       Cost: new FormControl(this.expense.Cost),
@@ -45,7 +51,7 @@ export class ExpenseEditComponent implements OnInit {
       Cost: form.value.Cost,
       Description: form.value.Description
     };
-    this._expenseService.updateExpense(updateExpense).subscribe(d => {
+    this._expenseService.updateExpense(updateExpense, updateExpense.ExpenseId.toString()).subscribe(d => {
       this._router.navigate(['/expense']);
     });
   }
