@@ -2,30 +2,34 @@
 <h1>Edit a Expense.</h1>
 <hr>
 
-<div *ngIf="expense">
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editExpenseForm">
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="ExpenseId" formControlName="ExpenseId" type="ExpenseId" required [value]="expense.ExpenseId" />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="Name" formControlName="Name" type="Name" required [value]="expense.Name" />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="Cost" formControlName="Cost" type="Cost" required [value]="expense.Cost" />
-      </mat-form-field>
-    </div>
-    <div>
+<mat-card>
+  <div *ngIf="expense">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editExpenseForm">
+      <div>
         <mat-form-field>
-          <input matInput placeholder="Description" formControlName="Description" type="Description" required [value]="expense.Description" />
+          <input matInput placeholder="ExpenseId" formControlName="ExpenseId" type="ExpenseId" required [value]="expense.ExpenseId" />
         </mat-form-field>
       </div>
-    <button mat-raised-button class="savebtn" color="blue" type="submit">Save</button>
-   </form>
-</div>
-
-<a mat-button routerLink="/expense">Back to List</a>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Name" formControlName="Name" type="Name" required [value]="expense.Name" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Cost" formControlName="Cost" type="Cost" required [value]="expense.Cost" />
+        </mat-form-field>
+      </div>
+      <div>
+          <mat-form-field>
+            <input matInput placeholder="Description" formControlName="Description" type="Description" required [value]="expense.Description" />
+          </mat-form-field>
+        </div>
+      <button mat-raised-button class="savebtn" color="primary" type="submit">Save</button>
+     </form>
+  </div>
+  <br>
+  <button mat-raised-button color="accent" routerLink="/expense">
+    Back to List
+  </button>
+</mat-card>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {MatCardModule} from '@angular/material/card';
 
 import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule,MatTableModule} from "@angular/material";
 
@@ -22,18 +23,26 @@ import { ExpenseIndexComponent } from './components/expense/expense-index/expens
 import { ExpenseCreateComponent } from './components/expense/expense-create/expense-create.component';
 import { ExpenseEditComponent } from './components/expense/expense-edit/expense-edit.component';
 import { ExpenseDeleteComponent } from './components/expense/expense-delete/expense-delete.component';
+import { NetworthDetailComponent } from './components/networth/networth-detail/networth-detail.component';
+import { NetworthCreateComponent } from './components/networth/networth-create/networth-create.component';
 
 const routes = [
   { path: "register", component: RegistrationComponent},
   { path: "register2", component: Register2Component},
   { path: 'login', component: LoginComponent },
   { path: 'home', component:HomeComponent},
-  { path: 'netWorth',component:NetworthIndexComponent},
+  { path: 'netWorth', children:[
+    { path: '',component: NetworthIndexComponent },
+    { path: 'details/:id', component: NetworthDetailComponent},
+    { path: 'create',component: NetworthCreateComponent},
+   ]
+  },
+
   { path: 'expense', children:[
     { path: '',component: ExpenseIndexComponent },
     { path: 'create', component: ExpenseCreateComponent },
     { path: 'edit/:id', component: ExpenseEditComponent},
-    { path: 'delete/:id', component: ExpenseEditComponent}
+    { path: 'delete/:id', component: ExpenseDeleteComponent}
    ]
   },
   { path: '**', component: LoginComponent }
@@ -52,6 +61,8 @@ const routes = [
     ExpenseCreateComponent,
     ExpenseEditComponent,
     ExpenseDeleteComponent,
+    NetworthDetailComponent,
+    NetworthCreateComponent,
    // HomeComponent
   ],
   imports: [
@@ -65,7 +76,8 @@ const routes = [
     RouterModule.forRoot(routes),
     HttpClientModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule
   ],
   providers: [
     AuthService,
