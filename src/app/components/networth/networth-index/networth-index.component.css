@@ -1,0 +1,17 @@
+table{
+    width: 50%;
+    margin: auto;
+}
+td, th {
+    width: 25%;
+    text-align: center;
+  }
+
+  td.mat-cell{
+      padding: 10px;
+
+  }
+  .networth-container{
+      background: #4C5B5C;
+      min-height: 100vh;
+  }

@@ -13,6 +13,11 @@ export class ExpenseService {
     return this._http.get(`${ApiUrl}api/Expense/`, { headers: this.getHeaders()});
   }
 
+  getSingleExpense(id: string){
+    return this._http.get(`${ApiUrl}api/expense/${id}`, { headers: this.getHeaders() });
+
+  }
+
   createExpense(expense: Expense){
     return this._http.post(`${ApiUrl}api/Expense/`, expense, { headers: this.getHeaders()});
   }
@@ -26,7 +31,7 @@ export class ExpenseService {
   }
 
   deleteExpense(id: number) {
-    return this._http.get(`${ApiUrl}api/Expense/${id}`, { headers: this.getHeaders()});
+    return this._http.delete(`${ApiUrl}api/Expense/${id}`, { headers: this.getHeaders()});
   }
   private getHeaders() {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`); 

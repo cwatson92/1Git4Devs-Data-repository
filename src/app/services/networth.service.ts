@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { NetWorth } from '../components/models/NetWorth';
 
 const ApiUrl = 'https://cashflowfinances.azurewebsites.net/'
 
@@ -10,6 +11,14 @@ export class NetWorthService {
 
   getNetWorth() {
     return this._http.get(`${ApiUrl}api/netWorth/`, { headers: this.getHeaders() });
+  }
+
+  getNetWorthDetails(id: string) {
+    return this._http.get(`${ApiUrl}api/netWorth/${id}`, { headers: this.getHeaders() });
+  }
+
+  createNetWorth(netWorth: NetWorth) {
+    return this._http.post(`${ApiUrl}/api/NetWorth`, netWorth, {headers: this.getHeaders()});
   }
 
   private getHeaders() {
