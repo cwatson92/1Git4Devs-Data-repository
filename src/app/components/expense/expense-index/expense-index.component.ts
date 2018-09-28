@@ -11,6 +11,7 @@ import { MatTableDataSource } from '@angular/material';
 export class ExpenseIndexComponent implements OnInit {
   columnNames = ['Name', 'Cost', 'Description', 'Edit', 'Delete']
   dataSource: MatTableDataSource<Expense>
+
   constructor(private _expenseService: ExpenseService) { }
 
   ngOnInit() {
