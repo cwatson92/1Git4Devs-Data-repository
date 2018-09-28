@@ -1,0 +1,62 @@
+<app-header></app-header>
+<h1>Budget</h1>
+<button mat-raised color="blue" routerLink ="/budget/create">Create New</button>
+<hr>
+
+<div>
+<table mat-table [dataSource]= "dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="MonthlyIncome">
+    <th mat-header-cell *matHeaderCellDef> Monthly Income </th>
+    <td mat-cell *matCellDef="let budget"> {{budget.MonthlyIncome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="EstimatedAvailableBalance">
+    <th mat-header-cell *matHeaderCellDef> Estimated Available Balance </th>
+    <td mat-cell *matCellDef="let budget"> {{budget.EstimatedAvailableBalance}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="SavingsAmount">
+    <th mat-header-cell *matHeaderCellDef> Savings Amount </th>
+    <td mat-cell *matCellDef="let budget"> {{budget.SavingsAmount}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
+  
+</table>
+</div>
+
+<!-- <app-header></app-header>
+<div class="budget">
+<h1>Budget</h1>
+<button mat-raised color="blue" routerLink = "/budget/create">Create New</button>
+<hr>
+
+<table mat-table [dataSource]= "dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="BudgetId">
+      <th mat-header-cell *matHeaderCellDef> BudgetId </th>
+      <td mat-cell *matCellDef="let budget"> {{budget.BudgetId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="MonthlyIncome">
+    <th mat-header-cell *matHeaderCellDef> MonthlyIncome </th>
+    <td mat-cell *matCellDef="let budget"> {{budget.MonthlyIncome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="EstimatedAvailableBalance">
+    <th mat-header-cell *matHeaderCellDef> EstimatedAvailableBalance </th>
+    <td mat-cell *matCellDef="let budget"> {{budget.EstimatedAvailableBalance}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="SavingsAmount">
+    <th mat-header-cell *matHeaderCellDef> SavingsAmount </th>
+    <td mat-cell *matCellDef="let budget"> {{budget.SavingsAmount}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
+
+</table>
+</div> -->
+
