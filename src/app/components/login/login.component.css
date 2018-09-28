@@ -1,13 +1,24 @@
-button{
+/* button{
     position: relative;
-    background:#85bb65;
+     background:#85bb65; 
     color:white;
     font-size:1.2rem;
     padding: 1rem 2rem;
     text-decoration:none; 
     border:2px solid white;
-    border-radius: 10px;
     border:none;
+} */
+
+mat-form-field {
+    width: 100%;
+}
+
+button{
+    width: 100%;
+}
+
+h1{
+    color: white;
 }
 /* 
 nav{
@@ -23,22 +34,32 @@ form{
 } */
 
 .logIn-div{
-    position: relative;
+    /* border: 5px solid black;*/
+    /* border-radius: 20px; */
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+    /* margin-bottom: 10px; */
+    /* background-color: whitesmoke; */
+    background: cadetblue;
+    opacity: .95;
+    position: relative; 
     top: 200px;
-    border: 5px solid black;
-    width: 500px;
+    width: 400px;
     left: 500px;
-    border-radius: 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     padding-top:  2em;
     padding-bottom: 2em;
-    margin-bottom: 10px;
-    background-color: whitesmoke;
 }
 
-body, html{
+body{
     margin: 0;
     padding: 0;
     font-family: "Roboto", "Arial", sans-serif;
+}
+.login-container{
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/929285/pexels-photo-929285.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    /* background-image: url("https://images.pexels.com/photos/259165/pexels-photo-259165.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"); */
+    /* background-image: url("https://images.pexels.com/photos/259209/pexels-photo-259209.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"); */
 }
