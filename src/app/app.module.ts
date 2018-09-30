@@ -4,6 +4,7 @@ import { RouterModule } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {MatCardModule} from '@angular/material/card';
+import {MatStepperModule} from '@angular/material/stepper';
 
 import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule,MatTableModule} from "@angular/material";
 
@@ -25,6 +26,7 @@ import { ExpenseEditComponent } from './components/expense/expense-edit/expense-
 import { ExpenseDeleteComponent } from './components/expense/expense-delete/expense-delete.component';
 import { NetworthDetailComponent } from './components/networth/networth-detail/networth-detail.component';
 import { NetworthCreateComponent } from './components/networth/networth-create/networth-create.component';
+import { NetworthEditComponent } from './components/networth/networth-edit/networth-edit.component';
 
 const routes = [
   { path: "register", component: RegistrationComponent},
@@ -63,6 +65,7 @@ const routes = [
     ExpenseDeleteComponent,
     NetworthDetailComponent,
     NetworthCreateComponent,
+    NetworthEditComponent,
    // HomeComponent
   ],
   imports: [
@@ -77,7 +80,8 @@ const routes = [
     HttpClientModule,
     MatInputModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatStepperModule
   ],
   providers: [
     AuthService,

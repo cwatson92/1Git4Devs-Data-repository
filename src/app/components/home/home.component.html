@@ -1,17 +1,31 @@
-<body>
-  <header class="v-header container">
-  <div class="fullscreen-video-wrap">
+<!-- <body>
+  <header class="v-header container"> -->
+  <!-- <div class="fullscreen-video-wrap">
       <video src="../../../assets/DollarBillPrintingVidevo.mov" autoplay="true" loop=true></video>
-  </div>
-  <div class="header-overlay"></div>
-  <div class="header-content">
-      <h1>CashFlow</h1>
-      <p>Tracking your assets and liabilities is an important component of knowing your complete financial picture....
-           Liabilities are anything you owe money on. A car loan, home mortgage, or even child support obligations are 
-           all liabilities that should also be included in your overall net worth..</p>
-       <!-- <a href="#" class="btn">Log In</a> -->
-       <button mat-raised-button class="btn" routerLink="/login">Log In</button>
-       <button mat-raised-button class="btn" routerLink="/register">Register</button>
-  </div>
+  </div> -->
+  <!-- <mat-card>
+      <div class="header-overlay"></div>
+      <div class="header-content">
+          <h1>CashFlow</h1>
+          <p>Tracking your assets and liabilities is an important component of knowing your complete financial picture....
+               Liabilities are anything you owe money on. A car loan, home mortgage, or even child support obligations are 
+               all liabilities that should also be included in your overall net worth..</p>
+           <button mat-raised-button class="btn" routerLink="/login">Log In</button>
+           <button mat-raised-button class="btn" routerLink="/register">Register</button>
+      </div>
+  </mat-card>
 </header>
+</body> -->
+
+<body>
+    <mat-card class="container">
+        <mat-card-title>CashFlow</mat-card-title>
+        <mat-card-content>
+            <p>Let us help you track your Assets and Liabilities to create a financial picture for you..</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" routerLink="/login">Log In</button>
+            <button mat-raised-button color="primary" routerLink="/register">Register</button>
+        </mat-card-actions>
+    </mat-card>
 </body>
