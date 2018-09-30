@@ -7,9 +7,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatStepperModule} from '@angular/material/stepper';
 
 import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule,MatTableModule} from "@angular/material";
-
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -24,9 +22,16 @@ import { ExpenseIndexComponent } from './components/expense/expense-index/expens
 import { ExpenseCreateComponent } from './components/expense/expense-create/expense-create.component';
 import { ExpenseEditComponent } from './components/expense/expense-edit/expense-edit.component';
 import { ExpenseDeleteComponent } from './components/expense/expense-delete/expense-delete.component';
+
 import { NetworthDetailComponent } from './components/networth/networth-detail/networth-detail.component';
 import { NetworthCreateComponent } from './components/networth/networth-create/networth-create.component';
 import { NetworthEditComponent } from './components/networth/networth-edit/networth-edit.component';
+import { BudgetService } from './services/budget.service';
+import { BudgetIndexComponent } from './components/budget/budget-index/budget-index.component';
+import { BudgetCreateComponent } from './components/budget/budget-create/budget-create.component';
+import { BudgetUpdateComponent } from './components/budget/budget-update/budget-update.component';
+
+
 
 const routes = [
   { path: "register", component: RegistrationComponent},
@@ -45,6 +50,13 @@ const routes = [
     { path: 'create', component: ExpenseCreateComponent },
     { path: 'edit/:id', component: ExpenseEditComponent},
     { path: 'delete/:id', component: ExpenseDeleteComponent}
+   ]
+  },
+  { path: 'budget', children:[
+    { path: '',component: BudgetIndexComponent },
+    { path: 'create', component: BudgetCreateComponent },
+    //{ path: 'edit/:id', component: BudgetEditComponent},
+    //{ path: 'delete/:id', component: ExpenseEditComponent}
    ]
   },
   { path: '**', component: LoginComponent }
@@ -66,6 +78,10 @@ const routes = [
     NetworthDetailComponent,
     NetworthCreateComponent,
     NetworthEditComponent,
+    BudgetIndexComponent,
+    BudgetCreateComponent,
+    BudgetUpdateComponent,
+  
    // HomeComponent
   ],
   imports: [
@@ -87,6 +103,7 @@ const routes = [
     AuthService,
     NetWorthService,
     ExpenseService,
+    BudgetService
   ],
   bootstrap: [AppComponent]
 })
