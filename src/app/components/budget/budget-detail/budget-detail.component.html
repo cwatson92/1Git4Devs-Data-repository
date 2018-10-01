@@ -1,0 +1,27 @@
+<h1>Details</h1>
+
+<hr>
+<div *ngIf="budget">
+  <div>
+    <label for="">BudgetID:</label>
+    <span>{{budget.BudgetId}}</span>
+  </div>
+  <div>
+    <label for="">OwnerID:</label>
+    <span>{{budget.OwnerId}}</span>
+  </div>
+  <div>
+    <label for="">Monthly Income:</label>
+    <span>{{budget.MonthlyIncome}}</span>
+  </div>
+  <div>
+    <label for="">Estimate Balance:</label>
+    <span>{{budget.EstimatedAvailableBalance}}</span>
+  </div>
+  <div>
+    <label for="">Savings:</label>
+    <span>{{budget.SavingsAmount}}</span>
+  </div>
+  <button mat-raised color="blue" routerLink="/budget">Back to List</button>
+
+</div>

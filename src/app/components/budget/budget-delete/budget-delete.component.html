@@ -1,0 +1,34 @@
+
+
+<h1>Delete</h1>
+<h4>Are you sure you want to delete this?</h4>
+
+<hr>
+<div *ngIf="expense">
+
+ <div>
+    <label>BudgetId</label>
+    <span>{{budget.BudgetId}}</span>
+ </div>
+
+  <div>
+    <label>Monthly Income</label>
+    <span>{{budget.MonthlyIncome}}</span>
+  </div>
+
+  <div>
+      <label>Estimated Available Balance</label>
+      <span>{{budget.EstimatedAvailableBalance}}</span>
+  </div>
+
+  <div>
+      <label>Savings Amount</label>
+      <span>{{budget.SavingsAmount}}</span>
+  </div>
+
+</div>
+
+<button mat-raised color="warn" (click)="onDelete()">Delete</button>
+<button mat-raised color="blue" routerLink="/budget">Back to List</button>
+
+
