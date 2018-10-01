@@ -1,452 +1,287 @@
+      <mat-card>
+            <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+              {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+            </button>
+            <form [formGroup]="netWorthFormGroup">
+            <mat-vertical-stepper [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>SavingsAccount</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="SavingsAccount" formControlName="SavingsAccount" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>CheckingAccount</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="CheckingAccount" formControlName="CheckingAccount" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>MoneyMarketAccount</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="MoneyMarketAccount" formControlName="MoneyMarketAccount" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>SavingsBonds</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="SavingsBonds" formControlName="SavingsBonds" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>CertificateOfDeposits</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="CertificateOfDeposits" formControlName="CertificateOfDeposits" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                      <ng-template matStepLabel>IRA</ng-template>
+                      <mat-form-field>
+                        <input matInput placeholder="IRA" formControlName="IRA" required>
+                      </mat-form-field>
+                      <div>
+                        <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                        <button mat-raised-button color="primary" matStepperNext>Next</button>
+                      </div>
+                  </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>RothIRA</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="RothIRA" formControlName="RothIRA" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>Retirement401K</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="Retirement401K" formControlName="Retirement401K" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>SepIRA</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="SepIRA" formControlName="SepIRA" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>Pension</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="Pension" formControlName="Pension" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>Annuity</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="Annuity" formControlName="Annuity" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>RealEstate</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="RealEstate" formControlName="RealEstate" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>PrincipleHome</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="PrincipleHome" formControlName="PrincipleHome" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>VacationHome</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="VacationHome" formControlName="VacationHome" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>CarsTrucksBoats</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="CarsTrucksBoats" formControlName="CarsTrucksBoats" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>HomeFurnishings</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="HomeFurnishings" formControlName="HomeFurnishings" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>OtherAssets</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="OtherAssets" formControlName="OtherAssets" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>CreditCardBalance</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="CreditCardBalance" formControlName="CreditCardBalance" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>EstimatedIncomeTaxOwed</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="EstimatedIncomeTaxOwed" formControlName="EstimatedIncomeTaxOwed" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>OtherOutstandingBills</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="OtherOutstandingBills" formControlName="OtherOutstandingBills" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>HomeMortgage</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="HomeMortgage" formControlName="HomeMortgage" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>HomeEquityLoan</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="HomeEquityLoan" formControlName="HomeEquityLoan" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>MortgagesOnRentals</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="MortgagesOnRentals" formControlName="MortgagesOnRentals" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>CarLoans</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="CarLoans" formControlName="CarLoans" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>StudentLoans</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="StudentLoans" formControlName="StudentLoans" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                    <ng-template matStepLabel>LifeInsurancePolicyLoans</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="LifeInsurancePolicyLoans" formControlName="LifeInsurancePolicyLoans" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                      <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="netWorthFormGroup">
+                      <ng-template matStepLabel>OtherLongTermDebt</ng-template>
+                      <mat-form-field>
+                        <input matInput placeholder="OtherLongTermDebt" formControlName="OtherLongTermDebt" required>
+                      </mat-form-field>
+                      <div>
+                        <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                        <button mat-raised-button color="primary" matStepperNext>Next</button>
+                      </div>
+                  </mat-step>
+                  <mat-step [stepControl]="netWorthFormGroup">
+                        <ng-template matStepLabel>Calculate</ng-template>
+                        <div>
+                          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                          <button mat-raised-button type="button" color="primary"(click)="onSubmit()">Submit</button>
+                        </div>
+                    </mat-step>
+            </mat-vertical-stepper>
+           </form>
+            <a mat-raised-button color="accent" routerLink="/netWorth">Back to List</a>
+          </mat-card>
 
-<!-- <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="netWorthForm">
-   <mat-form-field>
-     <input matInput name="SavingsAccount"  matInput placeholder="SavingsAccount" formControlName="SavingsAccount" type="text">
-   </mat-form-field>
-
-   <mat-form-field>
-      <input matInput name="CheckingAccount"  matInput placeholder="CheckingAccount" formControlName="CheckingAccount" type="text">
-   </mat-form-field>
-
-   <mat-form-field>
-      <input matInput name="MoneyMarketAccount"  matInput placeholder="MoneyMarketAccount" formControlName="MoneyMarketAccount" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="SavingsBonds"  matInput placeholder="SavingsBonds" formControlName="SavingsBonds" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="CertificateOfDeposits"  matInput placeholder="CertificateOfDeposits" formControlName="CertificateOfDeposits" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="IRA"  matInput placeholder="IRA" formControlName="IRA" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="RothIRA"  matInput placeholder="RothIRA" formControlName="RothIRA" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="Retirement401K"  matInput placeholder="Retirement401K" formControlName="Retirement401K" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="SepIRA"  matInput placeholder="SepIRA" formControlName="SepIRA" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="Pension"  matInput placeholder="Pension" formControlName="Pension" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="Annuity"  matInput placeholder="Annuity" formControlName="Annuity" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="RealEstate"  matInput placeholder="RealEstate" formControlName="RealEstate" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="PrincipleHome"  matInput placeholder="PrincipleHome" formControlName="PrincipleHome" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="VacationHome"  matInput placeholder="VacationHome" formControlName="VacationHome" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="CarsTrucksBoats"  matInput placeholder="CarsTrucksBoats" formControlName="CarsTrucksBoats" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="HomeFurnishings"  matInput placeholder="HomeFurnishings" formControlName="HomeFurnishings" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="OtherAssets"  matInput placeholder="OtherAssets" formControlName="OtherAssets" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="CreditCardBalance"  matInput placeholder="CreditCardBalance" formControlName="CreditCardBalance" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="EstimatedIncomeTaxOwed"  matInput placeholder="EstimatedIncomeTaxOwed" formControlName="EstimatedIncomeTaxOwed" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="OtherOutstandingBills"  matInput placeholder="OtherOutstandingBills" formControlName="OtherOutstandingBills" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="HomeMortgage"  matInput placeholder="HomeMortgage" formControlName="HomeMortgage" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="HomeEquityLoan"  matInput placeholder="HomeEquityLoan" formControlName="HomeEquityLoan" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="MortgagesOnRentals"  matInput placeholder="MortgagesOnRentals" formControlName="MortgagesOnRentals" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="CarLoans"  matInput placeholder="CarLoans" formControlName="CarLoans" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="StudentLoans"  matInput placeholder="StudentLoans" formControlName="StudentLoans" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="LifeInsurancePolicyLoans"  matInput placeholder="LifeInsurancePolicyLoans" formControlName="LifeInsurancePolicyLoans" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="OtherLongTermDebt"  matInput placeholder="OtherLongTermDebt" formControlName="OtherLongTermDebt" type="text">
-   </mat-form-field>
-   
-   <button mat-raised color="primary"> Submit </button>
-</form> -->
-
-<mat-card>
-  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-  </button>
-  <mat-vertical-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>SavingsAccount</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="SavingsAccount" formControlName="firstCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>CheckingAccount</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="CheckingAccount" formControlName="secondCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
-      <form [formGroup]="thirdFormGroup">
-        <ng-template matStepLabel>MoneyMarketAccount</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="MoneyMarketAccount" formControlName="thirdCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="fourthFormGroup">
-      <form [formGroup]="fourthFormGroup">
-        <ng-template matStepLabel>SavingsBonds</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="SavingsBonds" formControlName="fourthCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="fifthFormGroup">
-      <form [formGroup]="fifthFormGroup">
-        <ng-template matStepLabel>CertificateOfDeposits</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="CertificateOfDeposits" formControlName="fifthCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="sixthFormGroup">
-        <form [formGroup]="sixthFormGroup">
-          <ng-template matStepLabel>IRA</ng-template>
-          <mat-form-field>
-            <input matInput placeholder="IRA" formControlName="sixthCtrl" required>
-          </mat-form-field>
-          <div>
-            <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-            <button mat-raised-button color="primary" matStepperNext>Next</button>
-          </div>
-        </form>
-      </mat-step>
-    <mat-step [stepControl]="seventhFormGroup">
-      <form [formGroup]="seventhFormGroup">
-        <ng-template matStepLabel>RothIRA</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="RothIRA" formControlName="seventhCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="eighthFormGroup">
-      <form [formGroup]="eighthFormGroup">
-        <ng-template matStepLabel>Retirement401K</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Retirement401K" formControlName="eighthCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="ninthFormGroup">
-      <form [formGroup]="ninthFormGroup">
-        <ng-template matStepLabel>SepIRA</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="SepIRA" formControlName="ninthCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="tenthFormGroup">
-      <form [formGroup]="tenthFormGroup">
-        <ng-template matStepLabel>Pension</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Pension" formControlName="tenthCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="eleventhFormGroup">
-      <form [formGroup]="eleventhFormGroup">
-        <ng-template matStepLabel>Annuity</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Annuity" formControlName="eleventhCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="twelfthFormGroup">
-      <form [formGroup]="twelfthFormGroup">
-        <ng-template matStepLabel>RealEstate</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="RealEstate" formControlName="twelfthCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="thirteenFormGroup">
-      <form [formGroup]="thirteenFormGroup">
-        <ng-template matStepLabel>PrincipleHome</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="PrincipleHome" formControlName="thirteenCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="fourteenFormGroup">
-      <form [formGroup]="fourteenFormGroup">
-        <ng-template matStepLabel>VacationHome</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="VacationHome" formControlName="fourteenCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="fifteenFormGroup">
-      <form [formGroup]="fifteenFormGroup">
-        <ng-template matStepLabel>CarsTrucksBoats</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="CarsTrucksBoats" formControlName="fifteenCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="sixteenFormGroup">
-      <form [formGroup]="sixteenFormGroup">
-        <ng-template matStepLabel>HomeFurnishings</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="HomeFurnishings" formControlName="sixteenCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="seventeenFormGroup">
-      <form [formGroup]="seventeenFormGroup">
-        <ng-template matStepLabel>OtherAssets</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="OtherAssets" formControlName="seventeenCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="eighteenFormGroup">
-      <form [formGroup]="eighteenFormGroup">
-        <ng-template matStepLabel>CreditCardBalance</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="CreditCardBalance" formControlName="eighteenCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="nineteenFormGroup">
-      <form [formGroup]="nineteenFormGroup">
-        <ng-template matStepLabel>EstimatedIncomeTaxOwed</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="EstimatedIncomeTaxOwed" formControlName="nineteenCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="twentiethFormGroup">
-      <form [formGroup]="twentiethFormGroup">
-        <ng-template matStepLabel>OtherOutstandingBills</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="OtherOutstandingBills" formControlName="twentiethCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="twentyFirstFormGroup">
-      <form [formGroup]="twentyFirstFormGroup">
-        <ng-template matStepLabel>HomeMortgage</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="HomeMortgage" formControlName="twentyFirstCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="twentySecondFormGroup">
-      <form [formGroup]="twentySecondFormGroup">
-        <ng-template matStepLabel>HomeEquityLoan</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="HomeEquityLoan" formControlName="twentySecondCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="twentyThirdFormGroup">
-      <form [formGroup]="twentyThirdFormGroup">
-        <ng-template matStepLabel>MortgagesOnRentals</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="MortgagesOnRentals" formControlName="twentyThirdCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="twentyFourthFormGroup">
-      <form [formGroup]="twentyFourthFormGroup">
-        <ng-template matStepLabel>CarLoans</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="CarLoans" formControlName="twentyFourthCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="twentyFifthFormGroup">
-      <form [formGroup]="twentyFifthFormGroup">
-        <ng-template matStepLabel>StudentLoans</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="StudentLoans" formControlName="twentyFifthCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="twentySixthFormGroup">
-      <form [formGroup]="twentySixthFormGroup">
-        <ng-template matStepLabel>LifeInsurancePolicyLoans</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="LifeInsurancePolicyLoans" formControlName="twentySixthCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="twentySeventhFormGroup">
-        <form [formGroup]="twentySeventhFormGroup">
-          <ng-template matStepLabel>OtherLongTermDebt</ng-template>
-          <mat-form-field>
-            <input matInput placeholder="OtherLongTermDebt" formControlName="twentySeventhCtrl" required>
-          </mat-form-field>
-          <div>
-            <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-            <button mat-raised-button color="primary" matStepperNext>Next</button>
-          </div>
-        </form>
-      </mat-step>
-      <mat-step [stepControl]="twentyEighthFormGroup">
-            <ng-template matStepLabel>Calculate</ng-template>
-            <div>
-              <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-              <button mat-raised-button type="button" color="primary"(click)="onSubmit()">Submit</button>
-            </div>
-        </mat-step>
-  </mat-vertical-stepper>
-  
-  <a mat-raised-button color="accent" routerLink="/netWorth">Back to List</a>
-</mat-card>
