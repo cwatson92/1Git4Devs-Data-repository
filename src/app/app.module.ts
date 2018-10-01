@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {MatCardModule} from '@angular/material/card';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule,MatTableModule} from "@angular/material";
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -44,7 +45,6 @@ const routes = [
     { path: 'create',component: NetworthCreateComponent},
    ]
   },
-
   { path: 'expense', children:[
     { path: '',component: ExpenseIndexComponent },
     { path: 'create', component: ExpenseCreateComponent },
@@ -59,7 +59,8 @@ const routes = [
     //{ path: 'delete/:id', component: ExpenseEditComponent}
    ]
   },
-  { path: '**', component: LoginComponent }
+  { path: '**', redirectTo: '/home', pathMatch: 'full'},
+  { path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -97,7 +98,8 @@ const routes = [
     MatInputModule,
     MatTableModule,
     MatCardModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSidenavModule
   ],
   providers: [
     AuthService,

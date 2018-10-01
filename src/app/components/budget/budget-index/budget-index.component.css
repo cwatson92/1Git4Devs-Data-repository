@@ -1,3 +1,20 @@
 table{
-    width:100%;
+    width: 50%;
+    margin: auto;
+}
+td, th {
+    width: 25%;
+    text-align: center;
+  }
+
+  td.mat-cell{
+      padding: 10px;
+
+  }
+  h1{
+    margin: 0;
+    padding: 30px;
+}
+th.mat-header-cell{
+    font-size: 20px;
 }

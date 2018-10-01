@@ -1,0 +1,25 @@
+/* .main-container{
+    display: flex;
+}
+.side-nav{
+    flex:1;
+    background-color: lightseagreen;
+    min-height: 100vh;
+}
+.main-content{
+    flex: 6;
+    text-align: center;
+    overflow-y: scroll;
+} */
+
+
+.side-nav{
+    background-color: lightseagreen;
+    min-height: 100vh;
+    position: fixed;
+    width: 15%;
+}
+
+.main-content{
+    text-align: center;
+}

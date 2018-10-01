@@ -1,41 +1,40 @@
-<div class="networth-container">
-  <app-header></app-header>
-  <h1>Index</h1>
-   <button mat-raised color="primary" routerLink="/netWorth/create">Create New</button>
-  <hr>
-  
-  <div>
-  <table mat-table [dataSource]= "dataSource" class="mat-elevation-z8">
+  <div class="networth-container">
+    <h1>NetWorth</h1>
+    <button mat-raised-button color="accent" routerLink="/netWorth/create">Create</button>
+    <hr>
     
-    <ng-container matColumnDef="TotalAssets">
-      <th mat-header-cell *matHeaderCellDef> Total Assets </th>
-      <td mat-cell *matCellDef="let netWorth"> {{netWorth.TotalAssets}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="TotalLiabilities">
-      <th mat-header-cell *matHeaderCellDef> Total Liabilities </th>
-      <td mat-cell *matCellDef="let netWorth"> {{netWorth.TotalLiabilities}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="TotalNetWorth">
-      <th mat-header-cell *matHeaderCellDef> Total NetWorth </th>
-      <td mat-cell *matCellDef="let netWorth"> {{netWorth.TotalNetWorth}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="Details">
-        <th mat-header-cell *matHeaderCellDef>Details</th>
-        <td mat-cell *matCellDef="let netWorth">
-          <button mat-raised-button color="primary" routerLink="/netWorth/details/{{netWorth.NetWorthId}}">
-            <i class="material-icons">open_in_new</i>
-            Open
-          </button>
-        </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
-    <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
-  </table>
-</div>
+    <div>
+    <table mat-table [dataSource]= "dataSource" class="mat-elevation-z8">
+      
+      <ng-container matColumnDef="TotalAssets">
+        <th mat-header-cell *matHeaderCellDef> Total Assets </th>
+        <td mat-cell *matCellDef="let netWorth"> {{netWorth.TotalAssets}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="TotalLiabilities">
+        <th mat-header-cell *matHeaderCellDef> Total Liabilities </th>
+        <td mat-cell *matCellDef="let netWorth"> {{netWorth.TotalLiabilities}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="TotalNetWorth">
+        <th mat-header-cell *matHeaderCellDef> Total NetWorth </th>
+        <td mat-cell *matCellDef="let netWorth"> {{netWorth.TotalNetWorth}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="Details">
+          <th mat-header-cell *matHeaderCellDef>Details</th>
+          <td mat-cell *matCellDef="let netWorth">
+            <button mat-raised-button color="primary" routerLink="/netWorth/details/{{netWorth.NetWorthId}}">
+              <i class="material-icons">open_in_new</i>
+              Open
+            </button>
+          </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
+    </table>
+  </div>
 
 
 <!-- </div>
