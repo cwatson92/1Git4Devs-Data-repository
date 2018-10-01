@@ -26,7 +26,6 @@ import { ExpenseDeleteComponent } from './components/expense/expense-delete/expe
 
 import { NetworthDetailComponent } from './components/networth/networth-detail/networth-detail.component';
 import { NetworthCreateComponent } from './components/networth/networth-create/networth-create.component';
-import { NetworthEditComponent } from './components/networth/networth-edit/networth-edit.component';
 import { BudgetService } from './services/budget.service';
 import { BudgetIndexComponent } from './components/budget/budget-index/budget-index.component';
 import { BudgetCreateComponent } from './components/budget/budget-create/budget-create.component';
@@ -81,7 +80,6 @@ const routes = [
     ExpenseDeleteComponent,
     NetworthDetailComponent,
     NetworthCreateComponent,
-    NetworthEditComponent,
     BudgetIndexComponent,
     BudgetCreateComponent,
     BudgetDeleteComponent,
