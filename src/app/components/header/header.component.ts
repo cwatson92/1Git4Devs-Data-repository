@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  constructor(private authService: AuthService) {
+   }
 
   ngOnInit() {
   }
@@ -20,6 +21,10 @@ export class HeaderComponent implements OnInit {
    closeSlideMenu(){
     document.getElementById('side-menu').style.width = '0';
     // document.getElementById('main').style.marginLeft = '0';
+  }
+
+  onLogout(){
+    this.authService.logout();
   }
 
 }
