@@ -11,6 +11,15 @@ td, th {
       padding: 10px;
 
   }
-.expense{
-    background-color: aquamarine;
+  
+  h1{
+    margin: 0;
+    padding: 30px;
+}
+
+th.mat-header-cell{
+    font-size: 20px;
+}
+i{
+    cursor: pointer;
 }

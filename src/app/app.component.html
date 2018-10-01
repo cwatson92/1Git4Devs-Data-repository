@@ -1,6 +1,8 @@
-<!-- <app-header></app-header> -->
-<!--The content below is only a placeholder and can be replaced. -->
- <div style="text-align:center">
-  <router-outlet></router-outlet>    
+<div class="main-container">
+  <div class="side-nav" *ngIf="path !== '/login' && path !== '/register' && path !== '/register2' && path !== '/home'">
+      <app-header></app-header>
+  </div>
+  <div class="main-content">
+      <router-outlet></router-outlet>
+  </div>
 </div>
-
