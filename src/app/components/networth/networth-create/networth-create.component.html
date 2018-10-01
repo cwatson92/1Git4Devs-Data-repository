@@ -118,7 +118,7 @@
   <mat-vertical-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Savings Account</ng-template>
+        <ng-template matStepLabel>SavingsAccount</ng-template>
         <mat-form-field>
           <input matInput placeholder="SavingsAccount" formControlName="firstCtrl" required>
         </mat-form-field>
@@ -129,7 +129,7 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
       <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Checking Account</ng-template>
+        <ng-template matStepLabel>CheckingAccount</ng-template>
         <mat-form-field>
           <input matInput placeholder="CheckingAccount" formControlName="secondCtrl" required>
         </mat-form-field>
@@ -153,7 +153,7 @@
     </mat-step>
     <mat-step [stepControl]="fourthFormGroup">
       <form [formGroup]="fourthFormGroup">
-        <ng-template matStepLabel>Savings Bonds</ng-template>
+        <ng-template matStepLabel>SavingsBonds</ng-template>
         <mat-form-field>
           <input matInput placeholder="SavingsBonds" formControlName="fourthCtrl" required>
         </mat-form-field>
@@ -165,7 +165,7 @@
     </mat-step>
     <mat-step [stepControl]="fifthFormGroup">
       <form [formGroup]="fifthFormGroup">
-        <ng-template matStepLabel>Certificate Of Deposits</ng-template>
+        <ng-template matStepLabel>CertificateOfDeposits</ng-template>
         <mat-form-field>
           <input matInput placeholder="CertificateOfDeposits" formControlName="fifthCtrl" required>
         </mat-form-field>
@@ -179,7 +179,7 @@
         <form [formGroup]="sixthFormGroup">
           <ng-template matStepLabel>IRA</ng-template>
           <mat-form-field>
-            <input matInput placeholder="CertificateOfDeposits" formControlName="sixthCtrl" required>
+            <input matInput placeholder="IRA" formControlName="sixthCtrl" required>
           </mat-form-field>
           <div>
             <button mat-raised-button color="warn" matStepperPrevious>Back</button>
@@ -189,7 +189,7 @@
       </mat-step>
     <mat-step [stepControl]="seventhFormGroup">
       <form [formGroup]="seventhFormGroup">
-        <ng-template matStepLabel>Roth IRA</ng-template>
+        <ng-template matStepLabel>RothIRA</ng-template>
         <mat-form-field>
           <input matInput placeholder="RothIRA" formControlName="seventhCtrl" required>
         </mat-form-field>
@@ -201,7 +201,7 @@
     </mat-step>
     <mat-step [stepControl]="eighthFormGroup">
       <form [formGroup]="eighthFormGroup">
-        <ng-template matStepLabel>Retirement 401K</ng-template>
+        <ng-template matStepLabel>Retirement401K</ng-template>
         <mat-form-field>
           <input matInput placeholder="Retirement401K" formControlName="eighthCtrl" required>
         </mat-form-field>
@@ -249,7 +249,7 @@
     </mat-step>
     <mat-step [stepControl]="twelfthFormGroup">
       <form [formGroup]="twelfthFormGroup">
-        <ng-template matStepLabel>Real Estate</ng-template>
+        <ng-template matStepLabel>RealEstate</ng-template>
         <mat-form-field>
           <input matInput placeholder="RealEstate" formControlName="twelfthCtrl" required>
         </mat-form-field>
@@ -261,7 +261,7 @@
     </mat-step>
     <mat-step [stepControl]="thirteenFormGroup">
       <form [formGroup]="thirteenFormGroup">
-        <ng-template matStepLabel>Principle Home</ng-template>
+        <ng-template matStepLabel>PrincipleHome</ng-template>
         <mat-form-field>
           <input matInput placeholder="PrincipleHome" formControlName="thirteenCtrl" required>
         </mat-form-field>
@@ -273,7 +273,7 @@
     </mat-step>
     <mat-step [stepControl]="fourteenFormGroup">
       <form [formGroup]="fourteenFormGroup">
-        <ng-template matStepLabel>Vacation Home</ng-template>
+        <ng-template matStepLabel>VacationHome</ng-template>
         <mat-form-field>
           <input matInput placeholder="VacationHome" formControlName="fourteenCtrl" required>
         </mat-form-field>
@@ -285,7 +285,7 @@
     </mat-step>
     <mat-step [stepControl]="fifteenFormGroup">
       <form [formGroup]="fifteenFormGroup">
-        <ng-template matStepLabel>Cars Trucks Boats</ng-template>
+        <ng-template matStepLabel>CarsTrucksBoats</ng-template>
         <mat-form-field>
           <input matInput placeholder="CarsTrucksBoats" formControlName="fifteenCtrl" required>
         </mat-form-field>
@@ -297,7 +297,7 @@
     </mat-step>
     <mat-step [stepControl]="sixteenFormGroup">
       <form [formGroup]="sixteenFormGroup">
-        <ng-template matStepLabel>Home Furnishings</ng-template>
+        <ng-template matStepLabel>HomeFurnishings</ng-template>
         <mat-form-field>
           <input matInput placeholder="HomeFurnishings" formControlName="sixteenCtrl" required>
         </mat-form-field>
@@ -309,7 +309,7 @@
     </mat-step>
     <mat-step [stepControl]="seventeenFormGroup">
       <form [formGroup]="seventeenFormGroup">
-        <ng-template matStepLabel>Other assets</ng-template>
+        <ng-template matStepLabel>OtherAssets</ng-template>
         <mat-form-field>
           <input matInput placeholder="OtherAssets" formControlName="seventeenCtrl" required>
         </mat-form-field>
@@ -333,7 +333,7 @@
     </mat-step>
     <mat-step [stepControl]="nineteenFormGroup">
       <form [formGroup]="nineteenFormGroup">
-        <ng-template matStepLabel>Estimated Income Tax Owed Tax Owed</ng-template>
+        <ng-template matStepLabel>EstimatedIncomeTaxOwed</ng-template>
         <mat-form-field>
           <input matInput placeholder="EstimatedIncomeTaxOwed" formControlName="nineteenCtrl" required>
         </mat-form-field>
@@ -443,7 +443,7 @@
             <ng-template matStepLabel>Calculate</ng-template>
             <div>
               <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-              <button mat-raised-button type="button" color="primary" (click)="onSubmit()"> Submit </button>
+              <button mat-raised-button type="button" color="primary"(click)="onSubmit()">Submit</button>
             </div>
         </mat-step>
   </mat-vertical-stepper>
