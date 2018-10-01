@@ -27,7 +27,9 @@ import { NetworthCreateComponent } from './components/networth/networth-create/n
 import { BudgetService } from './services/budget.service';
 import { BudgetIndexComponent } from './components/budget/budget-index/budget-index.component';
 import { BudgetCreateComponent } from './components/budget/budget-create/budget-create.component';
-import { BudgetUpdateComponent } from './components/budget/budget-update/budget-update.component';
+import { BudgetDeleteComponent } from './components/budget/budget-delete/budget-delete.component';
+import { BudgetDetailComponent } from './components/budget/budget-detail/budget-detail.component';
+
 
 
 
@@ -47,17 +49,17 @@ const routes = [
     { path: '',component: ExpenseIndexComponent },
     { path: 'create', component: ExpenseCreateComponent },
     { path: 'edit/:id', component: ExpenseEditComponent},
-    { path: 'delete/:id', component: ExpenseDeleteComponent}
+    { path: 'delete/:id', component: ExpenseDeleteComponent},
    ]
   },
   { path: 'budget', children:[
     { path: '',component: BudgetIndexComponent },
     { path: 'create', component: BudgetCreateComponent },
-    //{ path: 'edit/:id', component: BudgetEditComponent},
-    //{ path: 'delete/:id', component: ExpenseEditComponent}
+    { path: 'delete/:id', component: BudgetDeleteComponent},
+    { path: 'details/:id', component: BudgetDetailComponent}
    ]
   },
-  { path: '**', component: LoginComponent }
+    { path: '**', component: LoginComponent }
 ];
 
 @NgModule({
@@ -77,7 +79,8 @@ const routes = [
     NetworthCreateComponent,
     BudgetIndexComponent,
     BudgetCreateComponent,
-    BudgetUpdateComponent,
+    BudgetDeleteComponent,
+    BudgetDetailComponent
   
    // HomeComponent
   ],
