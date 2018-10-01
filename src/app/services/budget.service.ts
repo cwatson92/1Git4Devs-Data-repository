@@ -7,9 +7,17 @@ const ApiUrl = 'https://cashflowfinances.azurewebsites.net/';
 @Injectable()
 
 export class BudgetService {
+  getBudgetDetail(arg0: string): any {
+    throw new Error("Method not implemented.");
+  }
 
+  
   constructor(private _http: HttpClient) { }
 
+  getSingleBudget(id: string){
+    return this._http.get(`${ApiUrl}api/Budget/${id}`, { headers: this.getHeaders() });
+
+  }
   getBudget() {
     return this._http.get(`${ApiUrl}api/Budget`, { headers: this.getHeaders()});
   }
@@ -20,6 +28,10 @@ export class BudgetService {
 
   updateBudget(budget: Budget, id: number) {
     return this._http.put(`${ApiUrl}api/Budget/${id}`, budget, { headers: this.getHeaders() });
+  }
+
+  deleteBudget(id: number) {
+    return this._http.delete(`${ApiUrl}api/Budget/${id}`, { headers: this.getHeaders()});
   }
 
   private getHeaders(){

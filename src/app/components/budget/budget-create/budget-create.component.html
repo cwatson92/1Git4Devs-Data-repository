@@ -1,3 +1,5 @@
+
+
 <h1>Budget</h1>
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="budgetForm">
 <div class="container">
@@ -12,10 +14,12 @@
   <mat-form-field>
       <input matInput placeholder="SavingsAmount" formControlName="SavingsAmount">
     </mat-form-field>
+    
 
   <button mat-raised color="primary"> Submit </button>
 
-  <a mat-button routerLink="/expense">Back to List</a>
+  <a mat-button routerLink="/budget">Back to List</a>
 </div>
 </form>
+
 
