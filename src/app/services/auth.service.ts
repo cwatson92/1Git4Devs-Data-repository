@@ -18,7 +18,6 @@ export class AuthService {
   constructor( private _http: HttpClient, private _router: Router) { }
 
   register(regUserData: RegisterUser){
-    console.log("string")
    return this._http.post( `${APIURL}/api/Account/Register`,regUserData);
   }
 
@@ -36,10 +35,18 @@ export class AuthService {
 
   currentUser(): Observable<Object> {
     if (!localStorage.getItem('id_token')) { return new Observable(observer => observer.next(false));}
+    return this._http.get(`${APIURL}/api/Account/UserInfo`,{ headers: this.setHeader() });
+  }
 
-    const authHeader = new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('id_token')}`);
+  logout(){
+    localStorage.clear();
+    this.isLoggedIn.next(false);
+    this._http.post(`${APIURL}/api/Account/Logout`, {headers: this.setHeader()});
+    this._router.navigate(['/']);
+  }
 
-    return this._http.get(`${APIURL}/api/Account/UserInfo`,{ headers: authHeader });
+  private setHeader(): HttpHeaders {
+    return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
 
 }

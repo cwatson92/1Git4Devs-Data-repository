@@ -6,7 +6,7 @@
 </mat-toolbar> -->
 
 <!-- <mat-toolbar color= "primary"> -->
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <span class="open-slide">
       <div class="nav-button" (click)="openSlideMenu">
       <i (click)="openSlideMenu()">
@@ -31,14 +31,57 @@
   </span>
   </div>
   <script>
-    // function openSlideMenu(){
-    //   console.log("clicked")
-    //   document.getElementById('side-menu').style.width = '250px';
-    //   document.getElementById('main').style.marginLeft = '250px';
-    // }
-    // function closeSlideMenu(){
-    //   this.document.getElementById('side-menu').style.width = '0';
-    //   this.document.getElementById('main').style.marginLeft = '0';
-    // }
-  </script>
+    function openSlideMenu(){
+      console.log("clicked")
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('main').style.marginLeft = '250px';
+    }
+    function closeSlideMenu(){
+      this.document.getElementById('side-menu').style.width = '0';
+      this.document.getElementById('main').style.marginLeft = '0';
+    }
+  </script> -->
 <!-- </mat-toolbar> -->
+
+<!-- <mat-sidenav-container class="nav-container" *ngIf="shouldRun">
+    <mat-sidenav mode="side" opened>
+      
+    </mat-sidenav>
+    <mat-sidenav-content>Main content</mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<nav>
+  <span class="title">
+    CashFlow
+  </span>
+  <span class="logo">
+      <img src="https://cdn.dribbble.com/users/310943/screenshots/3491354/yoga-illustration.gif" alt="">
+      </span>
+    <ul>
+      <li>
+        <a>
+          Home
+        </a>
+      </li>
+      <li>
+        <a routerLink="/netWorth">
+          Networth
+        </a>
+      </li>
+      <li>
+        <a routerLink="/expense">
+          Expense
+        </a>
+      </li>
+      <li>
+        <a routerLink="/budget">
+          Budget
+        </a>
+      </li>
+      <li>
+        <a (click)="onLogout()">
+          Log-out
+        </a>
+      </li>
+    </ul>
+  </nav>

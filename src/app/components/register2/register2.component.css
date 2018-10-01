@@ -1,12 +1,27 @@
-
-
-body{
-    background-color: black;
+.registration-div{
+    width: 400px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding-top:  2em;
+    padding-bottom: 2em;
+    background: #41EAD4;
+    opacity: .8;
+    margin: auto;
 }
 
 
+mat-form-field {
+    width: 100%;
+}
 
+button{
+    width: 100%;
+}
 
-
-
-
+.register-container{
+    display:flex;
+    align-items:center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url("https://cdn.dribbble.com/users/330915/screenshots/4860647/4.gif");
+}

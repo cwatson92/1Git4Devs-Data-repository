@@ -12,6 +12,13 @@ td, th {
 
   }
   .networth-container{
-      background: #4C5B5C;
-      min-height: 100vh;
+    height: 100vh;
+  }
+  h1{
+      margin: 0;
+      padding: 30px;
+  }
+
+  th.mat-header-cell{
+      font-size: 20px;
   }

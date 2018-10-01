@@ -1,33 +1,31 @@
-
-<app-header> </app-header>
-    <div class="container-fluid">
-        <div class="col-md-offset-5 col-md-4">
-                <form (ngSubmit)="onSubmit()" [formGroup]="_registerForm">
-                        <div>
-                          <div>
-                            <mat-form-field>
-                              <input matInput placeholder="First Name" formControlName="firstName" type="first name" required/>
-                            </mat-form-field>
-                          </div>
-                          <div>
-                            <mat-form-field>
-                                <input matInput placeholder="Last Name" formControlName="lastName" type="last name" required/>
-                            </mat-form-field>
-                          </div>
-                          <div>
-                              <mat-form-field>
-                                  <input matInput placeholder="Last Four" formControlName="lastFour" type="last four" required/>
-                              </mat-form-field>
-                          </div>
-                          <div>
-                            <mat-form-field>
-                                <input matInput placeholder="User Name" formControlName="userName" type="user name" required/>
-                            </mat-form-field>
-                        </div>
-                        </div>
-                        <button mat-raised-button class="nav-btn" color="primary" type="submit">Register</button>
-                      </form>
-        </div>
-    </div>
-
-
+<div class="register-container">
+    <mat-card class="registration-div">
+        <form (ngSubmit)="onSubmit()" [formGroup]="_registerForm">
+            <div>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="First Name" formControlName="firstName" type="first name" required />
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Last Name" formControlName="lastName" type="last name" required />
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Last Four" formControlName="lastFour" type="last four" required />
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="User Name" formControlName="userName" type="user name" required />
+                    </mat-form-field>
+                </div>
+            </div>
+            <button mat-raised-button class="nav-btn" color="primary" type="submit">Register</button>
+            <hr>
+            <button mat-raised-button color="warn" routerLink="/home"><i class="material-icons">arrow_back</i></button>
+        </form>
+    </mat-card>
+</div>

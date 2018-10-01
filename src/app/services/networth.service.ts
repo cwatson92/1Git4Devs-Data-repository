@@ -18,7 +18,11 @@ export class NetWorthService {
   }
 
   createNetWorth(netWorth: NetWorth) {
-    return this._http.post(`${ApiUrl}/api/NetWorth`, netWorth, {headers: this.getHeaders()});
+    return this._http.post(`${ApiUrl}api/NetWorth/`, netWorth, {headers: this.getHeaders()});
+  }
+
+  updateNetWorth(netWorth: NetWorth, id: string) {
+    return this._http.put(`${ApiUrl}api/NetWorth/${id}`, netWorth, { headers: this.getHeaders() });
   }
 
   private getHeaders() {
