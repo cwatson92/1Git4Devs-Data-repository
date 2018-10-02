@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./networth-index.component.css']
 })
 export class NetworthIndexComponent implements OnInit {
-  columnNames = ['TotalAssets', 'TotalLiabilities', 'TotalNetWorth','Details']
+  columnNames = ['TotalAssets', 'TotalLiabilities', 'TotalNetWorth','Details', 'Delete']
   dataSource: MatTableDataSource<NetWorth>
 
   NetWorthForm: FormGroup;
