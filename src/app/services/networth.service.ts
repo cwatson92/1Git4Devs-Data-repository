@@ -27,7 +27,7 @@ export class NetWorthService {
 
   
   deleteNetWorth(id: number) {
-    return this._http.delete(`${ApiUrl}api/NetWorth/${id}`, { headers: this.getHeaders()});
+    return this._http.delete(`${ApiUrl}api/networth/${id}`, { headers: this.getHeaders()});
   }
   
   private getHeaders() {
