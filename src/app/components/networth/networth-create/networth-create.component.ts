@@ -56,7 +56,7 @@ export class NetworthCreateComponent implements OnInit {
 
   onSubmit() {
     this._netWorthService.createNetWorth(this.netWorthFormGroup.value).subscribe(data => {
-      this._router.navigate(['/netWorth']);
+      this._router.navigate(['/networth']);
     })
   }
 
