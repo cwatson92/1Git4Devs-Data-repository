@@ -1,116 +1,110 @@
 <h1>Details</h1>
-
-<div *ngIf="netWorth">
-<form #f="ngForm">
-   <mat-form-field>
-     <input matInput name="SavingsAccount"  matInput placeholder="SavingsAccount" formControlName= "SavingsAccount" type="text">
-   </mat-form-field>
-
-   <mat-form-field>
-      <input matInput name="CheckingAccount"  matInput placeholder="CheckingAccount" formControlName= "CheckingAccount" type="text">
-   </mat-form-field>
-
-   <mat-form-field>
-      <input matInput name="MoneyMarketAccount"  matInput placeholder="MoneyMarketAccount" formControlName= "MoneyMarketAccount" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="SavingsBonds"  matInput placeholder="SavingsBonds" formControlName= "SavingsBonds" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="CertificateOfDeposits"  matInput placeholder="CertificateOfDeposits" formControlName= "CertificateOfDeposits" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="IRA"  matInput placeholder="IRA" formControlName= "IRA" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="RothIRA"  matInput placeholder="RothIRA" formControlName= "RothIRA" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="Retirement401K"  matInput placeholder="Retirement401K" formControlName= "Retirement401K" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="SepIRA"  matInput placeholder="SepIRA" formControlName= "SepIRA" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="Pension"  matInput placeholder="Pension" formControlName= "Pension" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="Annuity"  matInput placeholder="Annuity" formControlName= "Annuity" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="RealEstate"  matInput placeholder="RealEstate" formControlName= "RealEstate" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="PrincipleHome"  matInput placeholder="PrincipleHome" formControlName= "PrincipleHome" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="VacationHome"  matInput placeholder="VacationHome" formControlName= "VacationHome" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="CarsTrucksBoats"  matInput placeholder="CarsTrucksBoats" formControlName= "CarsTrucksBoats" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="HomeFurnishings"  matInput placeholder="HomeFurnishings" formControlName= "HomeFurnishings" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="OtherAssets"  matInput placeholder="OtherAssets" formControlName= "OtherAssets" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="CreditCardBalance"  matInput placeholder="CreditCardBalance" formControlName= "CreditCardBalance" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="EstimatedIncomeTaxOwed"  matInput placeholder="EstimatedIncomeTaxOwed" formControlName= "EstimatedIncomeTaxOwed" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="OtherOutstandingBills"  matInput placeholder="OtherOutstandingBills" formControlName= "OtherOutstandingBills" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="HomeMortgage"  matInput placeholder="HomeMortgage" formControlName= "HomeMortgage" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="HomeEquityLoan"  matInput placeholder="HomeEquityLoan" formControlName= "HomeEquityLoan" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="MortgagesOnRentals"  matInput placeholder="MortgagesOnRentals" formControlName= "MortgagesOnRentals" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="CarLoans"  matInput placeholder="CarLoans" formControlName= "CarLoans" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="StudentLoans"  matInput placeholder="StudentLoans" formControlName= "StudentLoans" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="LifeInsurancePolicyLoans"  matInput placeholder="LifeInsurancePolicyLoans" formControlName= "LifeInsurancePolicyLoans" type="text">
-   </mat-form-field> 
-
-   <mat-form-field>
-      <input matInput name="OtherLongTermDebt"  matInput placeholder="OtherLongTermDebt" formControlName= "OtherLongTermDebt" type="text">
-   </mat-form-field> 
+<mat-card>
+  <div *ngIf="netWorth">
+    <div>
+      <label for="">Savings Account</label>
+      <span>{{netWorth.SavingsAccount}}</span>
+    </div>
+    <div>
+      <label for="">Checking Account</label>
+      <span>{{netWorth.CheckingAccount}}</span>
+    </div>
+    <div>
+      <label for="">Money Market Account</label>
+      <span>{{netWorth.MoneyMarketAccount}}</span>
+    </div>
+    <div>
+      <label for="">Savings Bonds</label>
+      <span>{{netWorth.SavingsBonds}}</span>
+    </div>
+    <div>
+      <label for="">Certificate Of Deposits</label>
+      <span>{{netWorth.CertificateOfDeposits}}</span>
+    </div>
+    <div>
+      <label for="">IRA</label>
+      <span>{{netWorth.IRA}}</span>
+    </div>
+    <div>
+      <label for="">Roth IRA</label>
+      <span>{{netWorth.RothIRA}}</span>
+    </div>
+    <div>
+      <label for="">Retirement 401K</label>
+      <span>{{netWorth.Retirement401K}}</span>
+    </div>
+    <div>
+      <label for="">SepIRA</label>
+      <span>{{netWorth.SepIRA}}</span>
+    </div>
+    <div>
+      <label for="">Pension</label>
+      <span>{{netWorth.Pension}}</span>
+    </div>
+    <div>
+      <label for="">Annuity</label>
+      <span>{{netWorth.Annuity}}</span>
+    </div>
+    <div>
+      <label for="">Real Estate</label>
+      <span>{{netWorth.RealEstate}}</span>
+    </div>
+    <div>
+      <label for="">Principle Home</label>
+      <span>{{netWorth.PrincipleHome}}</span>
+    </div>
+    <div>
+      <label for="">Vacation Home</label>
+      <span>{{netWorth.VacationHome}}</span>
+    </div>
+    <div>
+      <label for="">Cars Trucks Boats</label>
+      <span>{{netWorth.CarsTrucksBoats}}</span>
+    </div>
+    <div>
+      <label for="">Home Furnishings</label>
+      <span>{{netWorth.HomeFurnishings}}</span>
+    </div>
+    <div>
+      <label for="">Other Assets</label>
+      <span>{{netWorth.OtherAssets}}</span>
+    </div>
+    <div>
+      <label for="">Credit Card Balance</label>
+      <span>{{netWorth.CreditCardBalance}}</span>
+    </div>
+    <div>
+      <label for="">Estimated Income Tax Owed</label>
+      <span>{{netWorth.EstimatedIncomeTaxOwed}}</span>
+    </div>
+    <div>
+      <label for="">Other Outstanding Bills</label>
+      <span>{{netWorth.OtherOutstandingBills}}</span>
+    </div>
+    <div>
+      <label for="">Home Mortgage</label>
+      <span>{{netWorth.HomeMortgage}}</span>
+    </div>
+    <div>
+      <label for="">Car Loans</label>
+      <span>{{netWorth.CarLoans}}</span>
+    </div>
+    <div>
+      <label for="">Student Loans</label>
+      <span>{{netWorth.StudentLoans}}</span>
+    </div>
+    <div>
+      <label for="">Life Insurance Policy Loans</label>
+      <span>{{netWorth.LifeInsurancePolicyLoans}}</span>
+    </div>
+    <div>
+      <label for="">Other Long Term Debt</label>
+      <span>{{netWorth.OtherLongTermDebt}}</span>
+    </div>
   
-</form>
-</div>
-
-<a mat-button routerLink="/netWorth">Back to List</a>
+  </div>
+</mat-card>
+<br>
+   <div>
+     <a mat-raised-button color="accent" routerLink="/netWorth">Back to List</a>
+   </div>

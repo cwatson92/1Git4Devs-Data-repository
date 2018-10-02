@@ -12,7 +12,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegistrationComponent } from './components/registration/registration.component';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { Register2Component } from './components/register2/register2.component';
@@ -26,13 +26,12 @@ import { ExpenseDeleteComponent } from './components/expense/expense-delete/expe
 
 import { NetworthDetailComponent } from './components/networth/networth-detail/networth-detail.component';
 import { NetworthCreateComponent } from './components/networth/networth-create/networth-create.component';
-import { NetworthEditComponent } from './components/networth/networth-edit/networth-edit.component';
 import { BudgetService } from './services/budget.service';
 import { BudgetIndexComponent } from './components/budget/budget-index/budget-index.component';
 import { BudgetCreateComponent } from './components/budget/budget-create/budget-create.component';
 import { BudgetDeleteComponent } from './components/budget/budget-delete/budget-delete.component';
 import { BudgetDetailComponent } from './components/budget/budget-detail/budget-detail.component';
-
+import { NetworthDeleteComponent } from './components/networth/networth-delete/networth-delete.component';
 
 
 
@@ -45,6 +44,8 @@ const routes = [
     { path: '',component: NetworthIndexComponent },
     { path: 'details/:id', component: NetworthDetailComponent},
     { path: 'create',component: NetworthCreateComponent},
+    { path: 'delete/:id', component: NetworthDeleteComponent},
+  
    ]
   },
   { path: 'expense', children:[
@@ -81,11 +82,12 @@ const routes = [
     ExpenseDeleteComponent,
     NetworthDetailComponent,
     NetworthCreateComponent,
-    NetworthEditComponent,
     BudgetIndexComponent,
     BudgetCreateComponent,
     BudgetDeleteComponent,
-    BudgetDetailComponent
+    BudgetDetailComponent,
+    NetworthDeleteComponent,
+
   
    // HomeComponent
   ],

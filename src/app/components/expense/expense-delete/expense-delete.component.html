@@ -2,29 +2,33 @@
 <h4>Are you sure you want to delete this?</h4>
 
 <hr>
-<div *ngIf="expense">
-
- <div>
-    <label>ExpenseId</label>
-    <span>{{expense.ExpenseId}}</span>
- </div>
-
-  <div>
-    <label>Name</label>
-    <span>{{expense.Name}}</span>
-  </div>
-
-  <div>
-      <label>Cost</label>
-      <span>{{expense.Cost}}</span>
-  </div>
-
-  <div>
-      <label>Description</label>
-      <span>{{expense.Description}}</span>
-  </div>
-
-</div>
-
-<button mat-raised color="warn" (click)="onDelete()">Delete</button>
-<button mat-raised color="blue" routerLink="/expense">Back to List</button>
+<mat-card>
+    <div *ngIf="expense">
+    
+     <div>
+        <label>ExpenseId:</label>
+        <span>{{expense.ExpenseId}}</span>
+     </div>
+    
+      <div>
+        <label>Name:</label>
+        <span>{{expense.Name}}</span>
+      </div>
+    
+      <div>
+          <label>Cost:</label>
+          <span>{{expense.Cost}}</span>
+      </div>
+    
+      <div>
+          <label>Description:</label>
+          <span>{{expense.Description}}</span>
+      </div>
+    
+    </div>
+    
+    <!-- <button mat-raised color="warn" (click)="onDelete()">Delete</button>
+    <button mat-raised color="blue" routerLink="/expense">Back to List</button> -->
+    <button mat-raised-button type="button" (click)="onDelete()" color="warn">Delete</button>
+    <a mat-raised-button color="accent" routerLink="/expense">Back to List</a>
+</mat-card>

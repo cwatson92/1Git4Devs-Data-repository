@@ -3,3 +3,8 @@
     flex-direction: column;
     width: 100%;
 } */
+
+mat-card{
+    width: 30%;
+    margin: auto;
+}
