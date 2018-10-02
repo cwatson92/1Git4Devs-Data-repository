@@ -1,6 +1,6 @@
 <h1>Create</h1>
 <mat-card>
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="expenseForm">
+<form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="expenseForm">
 <div class="container">
   <mat-form-field>
     <input matInput placeholder="Name" formControlName="Name">
