@@ -26,7 +26,7 @@ export class NetworthDeleteComponent implements OnInit {
 
   onDelete(){
     this._networthService.deleteNetWorth(this.networth.NetWorthId).subscribe(() => {
-      this._router.navigate(['/networth']);
+      this._router.navigate(['/netWorth']);
     });
   }
 }
