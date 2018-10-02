@@ -25,6 +25,11 @@ export class NetWorthService {
     return this._http.put(`${ApiUrl}api/NetWorth/${id}`, netWorth, { headers: this.getHeaders() });
   }
 
+  
+  deleteNetWorth(id: number) {
+    return this._http.delete(`${ApiUrl}api/NetWorth/${id}`, { headers: this.getHeaders()});
+  }
+  
   private getHeaders() {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
 

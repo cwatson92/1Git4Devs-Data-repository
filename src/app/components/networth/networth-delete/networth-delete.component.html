@@ -1,0 +1,32 @@
+
+
+<h1>Delete</h1>
+<h4>Are you sure you want to delete this?</h4>
+
+<hr>
+<div *ngIf="networth">
+
+ <div>
+    <label>NetworthId</label>
+    <span>{{networth.NetworthId}}</span>
+ </div>
+
+  <div>
+    <label>Name</label>
+    <span>{{networth.Name}}</span>
+  </div>
+
+  <div>
+      <label>Cost</label>
+      <span>{{networth.Cost}}</span>
+  </div>
+
+  <div>
+      <label>Description</label>
+      <span>{{networth.Description}}</span>
+  </div>
+
+</div>
+
+<button mat-raised color="warn" (click)="onDelete()">Delete</button>
+<button mat-raised color="blue" routerLink="/networth">Back to List</button>

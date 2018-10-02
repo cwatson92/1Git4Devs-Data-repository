@@ -1,4 +1,5 @@
 <h1>Create</h1>
+<mat-card>
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="expenseForm">
 <div class="container">
   <mat-form-field>
@@ -13,9 +14,10 @@
       <input matInput placeholder="Description" formControlName="Description">
     </mat-form-field>
 
-  <button mat-raised color="primary"> Submit </button>
-
-  <a mat-button routerLink="/expense">Back to List</a>
+  <button mat-raised-button type="button" color="primary"(click)="onSubmit()">Submit</button>
+  <a mat-raised-button color="accent" routerLink="/expense">Back to List</a>
 </div>
 </form>
+</mat-card>
+
 
