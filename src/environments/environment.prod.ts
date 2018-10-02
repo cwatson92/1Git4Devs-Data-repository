@@ -1,7 +1,7 @@
 export let APIURL = '';
 
 switch (window.location.hostname) {
-  case 'cm-cashflow.herokuapp.com':
+  case 'https://cashflowfinances.herokuapp.com':
     APIURL += 'https://cashflowfinances.azurewebsites.net';
     break;
   default:
