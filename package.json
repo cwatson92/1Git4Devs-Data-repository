@@ -1,9 +1,9 @@
 {
-  "name": "eleven-note-angular",
+  "name": "cashflowfinances",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -s dist/eleven-note-angular",
+    "start": "ng serve -s dist/cashflowfinances",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
